@@ -1,0 +1,13 @@
+
+<header class="header">
+  <div class="header__left">
+    <p class="header__left-title">Last works > > ></p>
+    <a class="header__left-cenzor" [routerLink]="[ '../works/cenzor' ]" routerLinkActive="active">Cenzor</a>
+    <a class="header__left-task" [routerLink]="[ '../works/tasklist' ]" routerLinkActive="active" >Task</a>
+    <a class="header__left-users" [routerLink]="[ '../works/userlist' ]" routerLinkActive="active">Users</a>
+  </div>
+  <div class="header__right">
+    <a class="header__right-back"[routerLink]="[ '../home' ]" routerLinkActive="active">Back to > > > Home</a>
+  </div>
+</header>
+<router-outlet></router-outlet>

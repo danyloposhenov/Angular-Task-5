@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="title">Plan your day!</h1>
+  <h2 class="user">
+    <span>User: </span>
+    <span>Count of Task {{ count }}</span>
+  </h2>
+  <div class="input-box">
+    <input type="text" id="text" [(ngModel)]="name">
+    <button id="addTask" (click)="addList()">Add</button>
+  </div>
+  <app-child [userName]="name" [add]="taskName" (changeCount)="checkStatus($event)"></app-child>
+</div>
+

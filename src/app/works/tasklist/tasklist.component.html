@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="input-block">
+    <form id="form">
+      <p class="input-title">Login</p>
+      <input type="text" id="login" placeholder="Enter login" [(ngModel)]="login" name="login">
+      <p class="input-title">Password</p>
+      <input type="text" id="password" placeholder="Enter password" [(ngModel)]="password" name="password">
+      <p class="input-title">Email address</p>
+      <input type="text" id="email" placeholder="Enter email" [(ngModel)]="email" name="email">
+      <input type="button" *ngIf="!editStatus" id="addUser" value="Add User" (click)="addUser()">
+      <input type="button" *ngIf="editStatus" id="editUser" value="Edit User" (click)="editUser()">
+    </form>
+  </div>
+  <div class="list">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Login</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr *ngFor="let person of persons; let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ person.login }}</td>
+          <td>{{ person.password }}</td>
+          <td>{{ person.email }}</td>
+          <td>
+            <button class="edit" (click)="edit(i)">Edit</button>
+          </td>
+          <td>
+            <button class="delete" (click)="delete(i)" [disabled]="editStatus"
+              [ngClass]="{'modal': modal}">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+.container {
+  width: 900px;
+  margin: 100px auto;
+  display: flex;
+  column-gap: 20px;
+  font-size: 18px;
+}
+
+.input-block, .list {
+  width: 50%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+input {
+  display: block;
+  height: 30px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid rgb(199, 192, 192);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  border: none;
+  box-shadow: 0 0 5px rgb(95, 189, 206);
+}
+
+#addUser, #editUser {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: white;
+  color: green;
+}
+
+#addUser:hover, #editUser:hover {
+  background-color: green;
+  color: white;
+}
+
+#addUser:active, #editUser:active {
+  box-shadow: 0 0 10px rgb(6, 110, 48);
+}
+
+/*---------------------*/
+
+table {
+  width: 100%;
+}
+
+thead {
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  border-top: 1px solid rgb(211, 208, 208);
+  border-bottom: 1px solid rgb(214, 204, 204);
+}
+
+tbody {
+  text-align: center;
+}
+
+tr {
+  line-height: 2;
+}
+td {
+  padding: 5px;
+}
+
+.edit {
+  width: 40px;
+  height: 30px;
+  background-color: rgb(255, 179, 0);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete {
+  width: 60px;
+  height: 30px;
+  background-color: rgba(221, 42, 42, 0.89);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.edit:hover, .delete:hover {
+  filter: brightness(70%);
+}
+
+.edit:active {
+  box-shadow: 0 0 10px rgb(228, 198, 51);
+}
+
+.delete:active {
+  box-shadow: 0 0 10px red;
+}
+
+
+
+.modal {
+  filter: brightness(70%);
+}
+

@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 [class]="title">
+    Bad words:
+    <span [class]="titleWords">{{arrTitle}}</span>
+  </h2>
+  <input type="text" [id]="text" [placeholder]="tHolder" [(ngModel)]="inputText"
+    [style.border]="tBorder ? '1px solid red' : ''">
+  <input type="button" [id]="btnAdd" value="Add" (click)="addWords()">
+  <input type="button" [id]="btnReset" value="Reset" (click)="resetWords()">
+  <textarea [id]="field" [(ngModel)]="cenzor" [placeholder]="fHolder"
+    [style.border]="fBorder ? '1px solid red' : ''"></textarea>
+  <input type="button" [id]="btnCenzor" value="cenzor" (click)="cenzorWords()">
+</div>
+

@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  padding: 15px 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(219, 216, 216);
+  font-size: 20px;
+  a {
+    width: 100px;
+    height: 35px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(112, 112, 195);
+    margin-bottom: -2px;
+    outline: none;
+  }
+  &__left {
+    display: flex;
+    column-gap: 40px;
+    position: relative;
+    top: 0px;
+    left: 0;
+  }
+  &__right {
+    a {
+      color: red;
+    }
+  }
+  .active {
+    color: green;
+    background-color: white;
+    border:2px solid rgb(219, 216, 216);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: none;
+  }
+}
+
+

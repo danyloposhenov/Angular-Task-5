@@ -1,0 +1,38 @@
+<div class="list">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Task</th>
+        <th>Check</th>
+        <th>DONE/IN PROGRESS</th>
+        <th>Edit</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr *ngFor="let task of list; let i = index">
+        <td>{{ i+1 }}</td>
+        <td>{{ task.name }}</td>
+        <td><input type="checkbox" id="check" [(ngModel)]="task.check" [checked]="task.check"></td>
+        <td [ngStyle]="{color: task.check ? 'green' : 'red'}">{{ task.check ? 'Done' : 'In PROGRESS' }}</td>
+        <td>
+          <button class="edit" (click)="edit(i)">Edit</button>
+        </td>
+        <td>
+          <button class="delete" (click)="delete(i)" [disabled]="!task.check"
+            [ngClass]="{'modal': !task.check}">Delete</button>
+        </td>
+      </tr>
+      <tr *ngIf="editInput">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><input type="text" id="editText" [(ngModel)]="editText" [value]="editText"></td>
+        <td>
+          <button class="save" (click)="save()">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
